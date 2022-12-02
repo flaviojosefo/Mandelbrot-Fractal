@@ -4,7 +4,22 @@
 
         static void Main(string[] args) {
 
-            Console.WriteLine("Hello, World!");
+            // Verify if the current OS is Windows
+            if (OperatingSystem.IsWindows()) {
+
+                // Create and display a fractal
+                Fractal f = new SerialFractal();
+                f.Generate();
+                f.Display();
+
+            } else {
+
+                // Print a message if the user is not on Windows
+                Console.WriteLine("This application is only supported on Windows OS");
+            }
+
+            // Read user input, so prevent the console from closing automatically
+            Console.ReadKey(true);
         }
     }
 }
