@@ -5,7 +5,7 @@ using System.Runtime.Versioning;
 namespace Mandelbrot_Fractal {
 
     [SupportedOSPlatform("windows")]
-    internal class SerialFractal : Fractal {
+    internal sealed class SerialFractal : Fractal {
 
         // Set the fractal's name
         public override string Name => "Serial_Fractal";
