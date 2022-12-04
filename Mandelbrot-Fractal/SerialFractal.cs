@@ -15,7 +15,7 @@ namespace Mandelbrot_Fractal {
         public override void Generate() {
 
             // Create a bitmap with the desired width and height
-            Bitmap bitmap = new(sizeX, sizeY);
+            using Bitmap bitmap = new(sizeX, sizeY);
 
             // Display an an initial informational message
             string initMessage =  $"Generating SERIAL fractal of {sizeX}x{sizeY} pixels with {MAX_ITERATIONS} iterations\n\n";
