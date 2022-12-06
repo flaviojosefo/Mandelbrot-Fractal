@@ -44,18 +44,6 @@ namespace Mandelbrot_Fractal {
         // https://www.nvidia.com/content/GTC/documents/1055_GTC09.pdf
         // https://stackoverflow.com/questions/5107694/how-do-i-add-a-reference-to-an-unmanaged-c-project-called-by-a-c-sharp-project/5107759#comment16513325_5107759
 
-
-
-        //<ItemGroup>
-        //  <PackageReference Include = "$(ProjectDir)dlls\CudaMandelbrot.dll" >
-
-        //    < BuildAction > None </ BuildAction >
-
-        //    < CopyToOutputDirectory > CopyIfNewer </ CopyToOutputDirectory >
-
-        //  </ PackageReference >
-        //</ ItemGroup >
-
         public override void Display() {
 
             if (useOPEN_GL) {
