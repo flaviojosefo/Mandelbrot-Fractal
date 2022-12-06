@@ -8,7 +8,7 @@ namespace Mandelbrot_Fractal {
     internal sealed class SerialFractal : Fractal {
 
         // Set the fractal's name
-        public override string Name => "Serial_Fractal";
+        public override string Name => "Serial_Fractal.png";
 
         public SerialFractal() { }
 
@@ -52,7 +52,7 @@ namespace Mandelbrot_Fractal {
             sw.Stop();
 
             // Save the bitmap as a 'png' file
-            bitmap.Save($"{Name}.png");
+            bitmap.Save($"{Name}");
         }
     }
 }

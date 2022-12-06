@@ -7,7 +7,7 @@ namespace Mandelbrot_Fractal {
         // Number of iterations
         protected const int MAX_ITERATIONS = 1000;
 
-        // Image dimensions
+        // Image dimensions (Multiples of 2 are preferred!)
         protected static readonly int sizeX = 1024;
         protected static readonly int sizeY = 1024;
 
@@ -41,7 +41,7 @@ namespace Mandelbrot_Fractal {
             0x0018e6, 0x0010ee, 0x0008f6, 0x0000ff
         };
 
-        // The name used on file creation
+        // The name used on file creation + extension
         public abstract string Name { get; }
 
         // The method to generate a fractal
@@ -52,7 +52,7 @@ namespace Mandelbrot_Fractal {
 
             try {
                 // Open the generated fractal image
-                Process.Start(new ProcessStartInfo($@"{Name}.png") { UseShellExecute = true });
+                Process.Start(new ProcessStartInfo($@"{Name}") { UseShellExecute = true });
             } catch (Exception e) {
                 // Display a message if the file could not be found
                 Console.WriteLine(e.Message);
