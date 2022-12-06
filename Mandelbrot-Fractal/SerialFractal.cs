@@ -1,5 +1,6 @@
 ﻿using System.Drawing;
 using System.Diagnostics;
+using System.Globalization;
 using System.Runtime.Versioning;
 
 namespace Mandelbrot_Fractal {
@@ -45,8 +46,8 @@ namespace Mandelbrot_Fractal {
             }
 
             // Display a message indicating the time necessary to generate the fractal
-            double genTime = sw.Elapsed.TotalMilliseconds;
-            Console.WriteLine($"Fractal generated in {genTime:0.00} ms");
+            string genTime = sw.Elapsed.TotalMilliseconds.ToString("0.00", CultureInfo.GetCultureInfo("en-US"));
+            Console.WriteLine($"Fractal generated in {genTime} ms");
 
             // Stop the timer
             sw.Stop();
