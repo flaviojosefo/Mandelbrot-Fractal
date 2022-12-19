@@ -9,7 +9,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <None Include="..\lib\CudaMandelbrot.dll" Link="CudaMandelbrot.dll">
+    <None Include="lib\CudaMandelbrot.dll" Link="CudaMandelbrot.dll">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
   </ItemGroup>
