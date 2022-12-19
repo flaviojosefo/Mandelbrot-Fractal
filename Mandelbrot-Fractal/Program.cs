@@ -8,7 +8,7 @@
             if (OperatingSystem.IsWindows()) {
 
                 // Create and display a fractal
-                Fractal f = new CudaFractal(true);
+                Fractal f = new CudaFractal(true, true);
                 f.Generate();
                 f.Display();
 
