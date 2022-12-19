@@ -32,7 +32,7 @@ namespace Mandelbrot_Fractal {
             byte[] data = new byte[size];
             Marshal.Copy(bmpData.Scan0, data, 0, size);
 
-            // Set max degree of parallelism to core count minus one
+            // Set max degree of parallelism to core count - 1
             ParallelOptions options = new();
             int maxCore = Environment.ProcessorCount - 1;
             options.MaxDegreeOfParallelism = maxCore > 0 ? maxCore : 1;
@@ -69,7 +69,7 @@ namespace Mandelbrot_Fractal {
             Marshal.Copy(data, 0, bmpData.Scan0, data.Length);
             bitmap.UnlockBits(bmpData);
 
-            // Display a message indicating the time necessary to generate the fractal
+            // Display a message indicating the time it took to generate the fractal
             string genTime = sw.Elapsed.TotalMilliseconds.ToString("0.00", CultureInfo.GetCultureInfo("en-US"));
             Console.WriteLine($"Fractal generated in {genTime} ms");
 

@@ -23,7 +23,7 @@ namespace Mandelbrot_Fractal {
             if (useOpenGL)
                 return;
 
-            // Display an an initial informational message
+            // Display an initial informational message
             string cpuOrGpu = useGPU ? "GPU (CUDA)" : "CPU";
             string initMessage = $"Generating fractal with {cpuOrGpu} of {sizeX}x{sizeY} pixels with {MAX_ITERATIONS} iterations\n\n";
             initMessage += $"Visible Coordinates\n    x: ({x0}; {x1})\n    y: ({y0}; {y1})\n";
@@ -34,14 +34,17 @@ namespace Mandelbrot_Fractal {
 
         public override void Display() {
 
+            // Check if user wishes to use OpenGL for the display
             if (useOpenGL) {
 
+                // Call the OpenGL version of this program
                 GenerateFractalOpenGL(1280, 720);
 
                 Console.Write("\nPress any key to close...");
 
             } else {
 
+                // Call the regular display function
                 base.Display();
             }
         }

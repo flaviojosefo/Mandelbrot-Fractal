@@ -45,7 +45,7 @@ namespace Mandelbrot_Fractal {
                 }
             }
 
-            // Display a message indicating the time necessary to generate the fractal
+            // Display a message indicating the time it took to generate the fractal
             string genTime = sw.Elapsed.TotalMilliseconds.ToString("0.00", CultureInfo.GetCultureInfo("en-US"));
             Console.WriteLine($"Fractal generated in {genTime} ms");
 
