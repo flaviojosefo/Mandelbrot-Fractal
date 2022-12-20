@@ -44,20 +44,20 @@ Running it on different operating systems will result in the display of an error
 
 As previously stated, Fractal generation is guaranteed through the use of **3** distinct solutions:
 
-1. **Single Thread**
-    Implemented in `C#`, this option generates a Mandelbrot fractal with the specified conditions in a `serial` 
-    fashion, writing the output to a `.png` file. It is the slowest of all options.
+1. **Single Thread**  
+ Implemented in `C#`, this option generates a Mandelbrot fractal with the specified conditions in a `serial` 
+ fashion, writing the output to a `.png` file. It is the slowest of all options.
 
-2. **Multithread**
-    Also implemented in `C#`, this option introduces a `parallelized` version of the algorithm, which also outputs to a
-    `.png` file. It spreads workload between multiple threads, by dividing **image line creation** through the use of a 
-    `Parallel.For` method on the `y` axis. The program will always use `CPU_Thread_Count - 1`.
+2. **Multithread**  
+ Also implemented in `C#`, this option introduces a `parallelized` version of the algorithm, which also outputs to a
+ `.png` file. It spreads workload between multiple threads, by dividing **image line creation** through the use of a 
+ `Parallel.For` method on the `y` axis. The program will always use `CPU_Thread_Count - 1`.
 
-3. **CUDA**
-    Developed as an extra to this project, the CUDA solution was built on `C`. It takes advantage of the `GPU`'s power
-    in order to calculate each pixel's color `individually`, presenting a much higher processing speed than all the other
-    methods. Due to the use of this specific language and technology, it outputs to a `.bmp` file and can only run on 
-    `NVIDIA GPUs`.
+3. **CUDA**  
+ Developed as an extra to this project, the CUDA solution was built on `C`. It takes advantage of the `GPU`'s power
+ in order to calculate each pixel's color `individually`, presenting a much higher processing speed than all the other
+ methods. Due to the use of this specific language and technology, it outputs to a `.bmp` file and can only run on 
+ `NVIDIA GPUs`.
 
 Also in this project is an `OpenGL/CUDA` interop based solution. It takes advantage of the graphical properties of OpenGL
 in order to display a **real-time**, interactable version of a fractal. It uses CUDA for the processing of a texture to 
