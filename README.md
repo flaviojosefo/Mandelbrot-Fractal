@@ -40,6 +40,16 @@ Running it on different operating systems will result in the display of an error
 - **Click** anywhere on the fractal with the `Right Mouse Button` to reset the fractal to its starting conditions.
 - **Close** the `OpenGL` window to go back to the Main Menu on the `Console`.
 
+### Changing Fractal Settings
+
+- The following settings can be changed in `Fractal.cs`:
+	- `MAX_ITERATIONS`: change the number of iterations;
+	- `size`: control image dimensions;
+	- `x0`/`x1` & `y0`/`y1`: control the fractal viewing coordinates.
+
+- The following settings can be changed in `CudaFractal.cs`:
+	- ``
+
 ## Discussion
 
 As previously stated, Fractal generation is guaranteed through the use of **3** distinct solutions:
