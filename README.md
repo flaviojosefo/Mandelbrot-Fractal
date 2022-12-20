@@ -11,7 +11,7 @@ outputting it as an image file (`.png` or `.bmp`).
 
 Three different ways of generating fractals are implemented (Single Thread, Multithread and CUDA), 
 with the last one serving as an extra, since the objective was the successful parallelization
-of the algorithm through a *Divide and Conquer* type strategy using the **CPU**.
+of the algorithm through a *Divide and Conquer* type strategy using the ***CPU***.
 
 **Disclaimer:** Due to the use of specific methods present on this project it can only run on the `Windows OS`.
 Running it on different operating systems will result in the display of an error on the console.
@@ -128,6 +128,8 @@ give off a certain excitement when we get things to work and are able to visuali
 
 As an extra, this project provided my first contact with both `CUDA` and `OpenGL`, which makes things a lot more 
 interesting since they become interactable and should come in handy for the next project.
+
+The code from which the `CudaMandelbrot.dll` originated is located on `/extras/kernel.cu`.
 
 ## Thanks
 
