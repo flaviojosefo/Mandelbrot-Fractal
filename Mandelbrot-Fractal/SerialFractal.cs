@@ -16,10 +16,10 @@ namespace Mandelbrot_Fractal {
         public override double Generate() {
 
             // Create a bitmap with the desired width and height
-            using Bitmap bitmap = new(sizeX, sizeY);
+            using Bitmap bitmap = new(size, size);
 
             // Display an an initial informational message
-            string initMessage =  $"Generating SERIAL fractal of {sizeX}x{sizeY} pixels with {MAX_ITERATIONS} iterations...\n\n";
+            string initMessage =  $"Generating SERIAL fractal of {size}x{size} pixels with {MAX_ITERATIONS} iterations...\n\n";
             initMessage += $"Visible Coordinates\n    x: ({x0}; {x1})\n    y: ({y0}; {y1})\n";
             Console.WriteLine(initMessage);
 
@@ -27,11 +27,11 @@ namespace Mandelbrot_Fractal {
             Stopwatch sw = Stopwatch.StartNew();
 
             // The main fractal generation algorithm
-            for (int py = 0; py < sizeY; py++) {
+            for (int py = 0; py < size; py++) {
 
                 double cY = y0 + py * pixelHeight;
 
-                for (int px = 0; px < sizeX; px++) {
+                for (int px = 0; px < size; px++) {
 
                     double cX = x0 + px * pixelWidth;
                     int iter = IterateMandel(cX, cY, MAX_ITERATIONS);

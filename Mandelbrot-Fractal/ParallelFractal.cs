@@ -17,20 +17,20 @@ namespace Mandelbrot_Fractal {
         public override double Generate() {
 
             // Create a bitmap with the desired width and height
-            Bitmap bitmap = new(sizeX, sizeY);
+            Bitmap bitmap = new(size, size);
             Rectangle rect = new(Point.Empty, bitmap.Size);
 
             // Display an an initial informational message
-            string initMessage = $"Generating PARALLEL fractal of {sizeX}x{sizeY} pixels with {MAX_ITERATIONS} iterations...\n\n";
+            string initMessage = $"Generating PARALLEL fractal of {size}x{size} pixels with {MAX_ITERATIONS} iterations...\n\n";
             initMessage += $"Visible Coordinates\n    x: ({x0}; {x1})\n    y: ({y0}; {y1})\n";
             Console.WriteLine(initMessage);
 
             // Set Bitmap data to be used in parallel
             BitmapData bmpData = bitmap.LockBits(rect, ImageLockMode.ReadOnly, bitmap.PixelFormat);
             int bpp = (bitmap.PixelFormat == PixelFormat.Format32bppArgb) ? 4 : 3;
-            int size = bmpData.Stride * bmpData.Height;
-            byte[] data = new byte[size];
-            Marshal.Copy(bmpData.Scan0, data, 0, size);
+            int bmpSize = bmpData.Stride * bmpData.Height;
+            byte[] data = new byte[bmpSize];
+            Marshal.Copy(bmpData.Scan0, data, 0, bmpSize);
 
             // Set max degree of parallelism to core count - 1
             ParallelOptions options = new();
@@ -41,11 +41,11 @@ namespace Mandelbrot_Fractal {
             Stopwatch sw = Stopwatch.StartNew();
 
             // The main fractal generation algorithm
-            Parallel.For(0, sizeY, options, py => {
+            Parallel.For(0, size, options, py => {
 
                 double cY = y0 + py * pixelHeight;
 
-                for (int px = 0; px < sizeX; px++) {
+                for (int px = 0; px < size; px++) {
 
                     int index = py * bmpData.Stride + px * bpp;
 

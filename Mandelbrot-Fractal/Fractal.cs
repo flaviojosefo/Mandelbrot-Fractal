@@ -8,8 +8,7 @@ namespace Mandelbrot_Fractal {
         protected const int MAX_ITERATIONS = 1000;
 
         // Image dimensions (Multiples of 2 are preferred!)
-        protected static readonly int sizeX = 4096;
-        protected static readonly int sizeY = 4096;
+        protected static readonly int size = 4096;
 
         // Visible zone coordinates
         protected static readonly double x0 = -2.0d;
@@ -18,8 +17,8 @@ namespace Mandelbrot_Fractal {
         protected static readonly double y1 = 1.25d;
 
         // Pixel size in (x,y) coordinates measure
-        protected readonly double pixelWidth = (x1 - x0) / sizeX;
-        protected readonly double pixelHeight = (y1 - y0) / sizeY;
+        protected readonly double pixelWidth = (x1 - x0) / size;
+        protected readonly double pixelHeight = (y1 - y0) / size;
 
         // 64 colors colormap in int format
         protected readonly int[] colorMap = {

@@ -24,11 +24,11 @@ namespace Mandelbrot_Fractal {
                 return 0d;
 
             // Display an initial informational message
-            string initMessage = $"Generating fractal with GPU (CUDA) of {sizeX}x{sizeY} pixels with {MAX_ITERATIONS} iterations...\n\n";
+            string initMessage = $"Generating fractal with GPU (CUDA) of {size}x{size} pixels with {MAX_ITERATIONS} iterations...\n\n";
             initMessage += $"Visible Coordinates\n    x: ({x0}; {x1})\n    y: ({y0}; {y1})\n";
             Console.WriteLine(initMessage);
 
-            return GenerateFractalBMP(sizeX, sizeY, x0, x1, y0, y1, pixelWidth, pixelHeight, MAX_ITERATIONS, colorMap, colorMap.Length, Name);
+            return GenerateFractalBMP(size, size, x0, x1, y0, y1, pixelWidth, pixelHeight, MAX_ITERATIONS, colorMap, colorMap.Length, Name);
         }
 
         public override void Display() {
