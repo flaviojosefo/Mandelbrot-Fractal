@@ -1,6 +1,4 @@
-﻿using System;
-using System.Reflection;
-using System.Runtime.Versioning;
+﻿using System.Runtime.Versioning;
 
 namespace Mandelbrot_Fractal {
 
