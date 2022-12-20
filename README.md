@@ -48,7 +48,7 @@ Running it on different operating systems will result in the display of an error
 	- `x0`/`x1` & `y0`/`y1`: control the fractal viewing coordinates.
 
 - The following settings can be changed in `CudaFractal.cs`:
-	- ``
+	- `glWidth` & `glHeight`: control OpenGL window and fractal texture dimensions
 
 ## Discussion
 
