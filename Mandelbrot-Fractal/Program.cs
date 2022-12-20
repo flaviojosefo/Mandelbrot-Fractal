@@ -7,10 +7,9 @@
             // Verify if the current OS is Windows
             if (OperatingSystem.IsWindows()) {
 
-                // Create and display a fractal
-                Fractal f = new CudaFractal(true, true);
-                f.Generate();
-                f.Display();
+                // Start a new menu and display it
+                Menu menu = new(120, 40);
+                menu.Display();
 
             } else {
 

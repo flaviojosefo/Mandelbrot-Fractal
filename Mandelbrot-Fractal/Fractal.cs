@@ -8,8 +8,8 @@ namespace Mandelbrot_Fractal {
         protected const int MAX_ITERATIONS = 1000;
 
         // Image dimensions (Multiples of 2 are preferred!)
-        protected static readonly int sizeX = 1024;
-        protected static readonly int sizeY = 1024;
+        protected static readonly int sizeX = 4096;
+        protected static readonly int sizeY = 4096;
 
         // Visible zone coordinates
         protected static readonly double x0 = -2.0d;
@@ -44,8 +44,8 @@ namespace Mandelbrot_Fractal {
         // The name used on file creation + extension
         public abstract string Name { get; }
 
-        // The method to generate a fractal
-        public abstract void Generate();
+        // The method to generate a fractal (returns time taken)
+        public abstract double Generate();
 
         // The method to display a fractal
         public virtual void Display() {

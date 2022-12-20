@@ -13,13 +13,13 @@ namespace Mandelbrot_Fractal {
 
         public SerialFractal() { }
 
-        public override void Generate() {
+        public override double Generate() {
 
             // Create a bitmap with the desired width and height
             using Bitmap bitmap = new(sizeX, sizeY);
 
             // Display an an initial informational message
-            string initMessage =  $"Generating SERIAL fractal of {sizeX}x{sizeY} pixels with {MAX_ITERATIONS} iterations\n\n";
+            string initMessage =  $"Generating SERIAL fractal of {sizeX}x{sizeY} pixels with {MAX_ITERATIONS} iterations...\n\n";
             initMessage += $"Visible Coordinates\n    x: ({x0}; {x1})\n    y: ({y0}; {y1})\n";
             Console.WriteLine(initMessage);
 
@@ -46,14 +46,18 @@ namespace Mandelbrot_Fractal {
             }
 
             // Display a message indicating the time it took to generate the fractal
-            string genTime = sw.Elapsed.TotalMilliseconds.ToString("0.00", CultureInfo.GetCultureInfo("en-US"));
-            Console.WriteLine($"Fractal generated in {genTime} ms");
+            double genTime = sw.Elapsed.TotalMilliseconds;
+            string genTimeString = genTime.ToString("0.000", CultureInfo.GetCultureInfo("en-US"));
+            Console.WriteLine($"Fractal generated in {genTimeString} ms");
 
             // Stop the timer
             sw.Stop();
 
             // Save the bitmap as a 'png' file
             bitmap.Save($"{Name}");
+
+            // Return the required generation time
+            return genTime;
         }
     }
 }
