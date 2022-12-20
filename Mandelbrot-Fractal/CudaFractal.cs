@@ -6,6 +6,11 @@ namespace Mandelbrot_Fractal {
     [SupportedOSPlatform("windows")]
     internal sealed class CudaFractal : Fractal {
 
+        // OpenGL image dimensions (window and texture!)
+        private static readonly int glWidth = 1280;
+        private static readonly int glHeight = 720;
+
+        // Used to verify OpenGL usability
         public bool UseOpenGL { get; set; }
 
         public override string Name => "Cuda_Fractal.bmp";
@@ -32,7 +37,7 @@ namespace Mandelbrot_Fractal {
             if (UseOpenGL) {
 
                 // Call the OpenGL version of this program
-                GenerateFractalOpenGL(1280, 720);
+                GenerateFractalOpenGL(glWidth, glHeight);
 
                 Console.Write("\nPress any key to close...");
 
