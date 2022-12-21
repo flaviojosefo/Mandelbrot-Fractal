@@ -119,7 +119,7 @@ The following results were obtained on the following hardware:
  This system possesses a downgraded GPU in comparison to the previous one; however the result is not too far off, 
  and as expected it still does much better than the CPU (over `65x` when compared with `Serial C#`).
  
- The difference between CPU implemenations however is now much bigger than previously, since we're now dealing with one
+ The difference between CPU implementations however is now much bigger than previously, since we're now dealing with one
  containing `12 threads` (meaning the program uses `11`). This time, it's over `8.3x`, which not only proves that the
  parallelization is working correctly, but that the more threads we have, the faster the fractal will be generated,
  meaning that other computers with larger amounts of threads will have even better numbers that the ones showcased.
