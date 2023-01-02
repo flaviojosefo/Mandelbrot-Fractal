@@ -12,6 +12,12 @@
     <None Include="lib\CudaMandelbrot.dll" Link="CudaMandelbrot.dll">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
+	<None Include="lib\glew32.dll" Link="glew32.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+	<None Include="lib\freeglutd.dll" Link="freeglutd.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
 
   <ItemGroup>
