@@ -2,7 +2,7 @@
 
 ## Author
 
-- **[Flávio Santos](https://github.com/fs000) - a22100771**
+- **[Flávio Santos](https://github.com/flaviojosefo) - a22100771**
 
 ## Summary
 
